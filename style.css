@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #FF8C00;
+    font-size: 36px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.gift img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
