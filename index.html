@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oykü'nün Doğum Günü</title>
+    <title>Doğum Günü Kutlama Sayfası</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Doğum Günün Kutlu Olsun, Öykü!</h1>
-        <p>Bu özel günün senin için ne kadar anlamlı olduğunu biliyorum. Hep mutlu ol!</p>
-        <div class="gift">
-            <img src="https://via.placeholder.com/300" alt="Hediye Resmi">
-            <p>Umarım bu küçük hediye hoşuna gider!</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<!-- Navbar -->
+<nav id="navbar">
+    <button onclick="window.location.href='#home'">Ana Sayfa</button>
+    <button onclick="window.location.href='#game'">Yarışma</button>
+    <button onclick="window.location.href='#message'">Mesajlar</button>
+</nav>
+
+<!-- Ana Sayfa -->
+<div id="home">
+    <h1>Hoş Geldiniz!</h1>
+    <p>Doğum günü kutlaması için en iyi site!</p>
+    <button onclick="toggleDarkMode()">Karanlık/Aydınlık Modu Değiştir</button>
+</div>
+
+<!-- Yazı Yazma Yarışması -->
+<div id="game">
+    <h2>Yazı Yazma Yarışması!</h2>
+    <p id="text-to-type">Bu metni hızlıca yaz!</p>
+    <input type="text" id="user-input" placeholder="Buraya yazın..." oninput="checkInput()" />
+    <p id="result"></p>
+</div>
+
+<!-- Mesaj Gönderme -->
+<div id="message">
+    <h1>Mesajınızı Gönderin:</h1>
+    <textarea id="message" placeholder="Mesajınızı buraya yazın..."></textarea>
+    <button onclick="sendMessage()">Gönder</button>
+    <p id="message-result"></p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
