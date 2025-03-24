@@ -5,7 +5,7 @@ const messages = [
     "Bugün senin günün! 🎉",
     "Daha nice mutlu yıllara! 🥳",
     "Umarım harika bir yıl geçirirsin! 💖",
-    "İyi ki doğdun, seni çok seviyorum! 😊",
+    "İyi ki doğdun,iyi ki hayatımda varsın! 😊",
     "Her günün bu kadar özel olsun! 🌟"
 ];
 
