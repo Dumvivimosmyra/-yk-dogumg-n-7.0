@@ -3,35 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğum Günü & Müzik Uygulaması</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Doğum Günün Kutlu Olsun! 🎉</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mutlu Yıllar!</h1>
-    <div id="message-container">
+    <div class="container">
+        <h1>Doğum Günün Kutlu Olsun! 🎂</h1>
         <p id="random-message"></p>
-        <button id="random-message-btn">Yeni Mesaj Göster</button>
-    </div>
+        <button id="random-message-btn">Sihirli Sözler</button>
+        <button id="dark-mode-btn" class="dark-mode-btn">🌙 Karanlık Mod</button>
 
-    <div id="music-player">
-        <input type="text" id="search-input" placeholder="Şarkı Ara...">
-        <button onclick="searchMusic()">Ara</button>
-        <div id="search-results"></div>
-        <div id="now-playing"></div>
-        <iframe id="youtube-player" width="250" height="200" frameborder="0"></iframe>
-    </div>
+        <!-- Radyo Tasarımı -->
+        <div id="radio-player">
+            <div class="radio-header">
+                <h3>🎶 Radyo</h3>
+                <input type="text" id="search-input" placeholder="Şarkı ara...">
+                <button onclick="searchMusic()">🔍 Ara</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+            <div id="now-playing" class="now-playing"></div>
+            <iframe id="youtube-player" width="100%" height="180" frameborder="0" allow="autoplay"></iframe>
+        </div>
 
-    <div id="note-panel">
-        <h2>Notlar</h2>
-        <p>Burada notlarınızı saklayabilirsiniz!</p>
+        <!-- Pano (Not Alanı) -->
+        <div id="note-panel">
+            <h2>📝 Birkaç Not:</h2>
+            <ul>
+                <li>Bugün müzik dinlemek için harika bir gün! 💝</li>
+                <li>Eğer müzik açılmıyorsa, diğer seçenekleri deneyebilirsin. 😀</li>
+                <li>Senin için seçtiğim müzikler var, dinlemeni isterim! 🎧</li>
+            </ul>
+            <p>🎵 Önerilen Müzikler:</p>
+            <ul>
+                <li>Çıkmaz Sokak (İnsanlar Gerçek Olsa)</li>
+                <li>Infinite Love (Emile Mosseri)</li>
+                <li>Grenadine (Vincent Delerm)</li>
+                <li>Wind Song (Emile Mosseri)</li>
+                <li>Prologue (Evgeny Grinko)</li>
+                <li>Outro (Evgeny Grinko)</li>
+                <li>Doğum/Birth (Büşra Kayıkçı)</li>
+                <li>Once Upon a Time (Evgeny Grinko)</li>
+                <li>My Home is Where My Heart Beats (TSU!)</li>
+                <li>Last Words (Mylesxiety)</li>
+                <li>Spiritual But Not (Oliver Koletzki)</li>
+                <li>Forgot Your Name (c152)</li>
+                <li>Apathy (oneheartt)</li>
+            </ul>
+        </div>
     </div>
-
-    <button id="dark-mode-btn">Karanlık Mod</button>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
 
 
