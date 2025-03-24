@@ -1,4 +1,4 @@
-/* Genel Stil */
+/* Genel stil */
 body {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle, rgba(255, 182, 193, 0.8), rgba(181, 255, 252, 0.6), rgba(255, 240, 245, 0.8)); 
@@ -10,7 +10,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Dalgalanma Animasyonu */
+/* Dalgalanma animasyonu */
 @keyframes waveAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -21,6 +21,38 @@ body {
 body.dark-mode {
     background: radial-gradient(circle, rgba(50, 50, 50, 0.8), rgba(40, 40, 40, 0.6), rgba(10, 10, 10, 0.8));
     color: #f0f8ff;
+}
+
+body.dark-mode #dark-mode-btn {
+    background-color: #6A0572;
+    color: #FFD1DC;
+}
+
+/* Konteyner */
+#message-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    display: inline-block;
+}
+
+/* Başlık */
+h1 {
+    color: #FF69B4;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraf */
+p {
+    font-size: 20px;
+    font-weight: normal;
+    color: #6A0572;
+    margin-top: 15px;
 }
 
 /* Butonlar */
@@ -40,62 +72,128 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Navbar */
-#navbar {
+/* Radyo Tasarımı */
+#music-player {
     position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(255, 182, 193, 0.8);
-    padding: 10px;
-    text-align: center;
+    left: 10px;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
 }
 
-#navbar button {
-    margin: 0 15px;
+#music-player input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #FF69B4;
+    outline: none;
+}
+
+#music-player input:focus {
+    border-color: #6A0572;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+#music-player button {
+    padding: 8px 15px;
+    background-color: #FFD1DC;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#search-results {
+    width: 100%;
+    height: 70px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#search-results .song {
+    font-size: 14px;
+    color: #6A0572;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#now-playing {
+    font-size: 14px;
+    font-weight: bold;
+    color: #6A0572;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Video kısmını gizlemek */
+#youtube-player {
+    display: none;
+}
+
+/* Pano (sol alt köşe) */
+#note-panel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    z-index: 10;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+#note-panel h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #6A0572;
+}
+
+/* Kaydırma çubuğu */
+#note-panel::-webkit-scrollbar,
+#search-results::-webkit-scrollbar {
+    width: 6px;
+}
+
+#note-panel::-webkit-scrollbar-thumb,
+#search-results::-webkit-scrollbar-thumb {
+    background-color: #FF69B4;
+    border-radius: 10px;
+}
+
+/* Karanlık Mod Butonu */
+#dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
     padding: 10px 20px;
     background-color: #FFD1DC;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    z-index: 1001;
 }
 
-#navbar button:hover {
-    background-color: #FFC0CB;
-    transform: scale(1.05);
+/* Buton Fokus Stili */
+button:focus {
+    outline: none;
 }
 
-/* Yazı Yazma Yarışması */
-#typing-game {
-    margin-top: 100px;
-}
-
-#typing-game input {
-    padding: 10px;
-    font-size: 16px;
-    width: 80%;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-#typing-game #result {
-    font-size: 20px;
-    color: green;
-}
-
-/* Mesajlar */
-#message-container textarea {
-    width: 80%;
-    height: 100px;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#message-container #result {
-    font-size: 20px;
-    color: blue;
-    margin-top: 20px;
-}
 
