@@ -3,42 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğum Günü Kutlama Sayfası</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Doğum Günü & Müzik Uygulaması</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Mutlu Yıllar!</h1>
+    <div id="message-container">
+        <p id="random-message"></p>
+        <button id="random-message-btn">Yeni Mesaj Göster</button>
+    </div>
 
-<!-- Navbar -->
-<nav id="navbar">
-    <button onclick="window.location.href='#home'">Ana Sayfa</button>
-    <button onclick="window.location.href='#game'">Yarışma</button>
-    <button onclick="window.location.href='#message'">Mesajlar</button>
-</nav>
+    <div id="music-player">
+        <input type="text" id="search-input" placeholder="Şarkı Ara...">
+        <button onclick="searchMusic()">Ara</button>
+        <div id="search-results"></div>
+        <div id="now-playing"></div>
+        <iframe id="youtube-player" width="250" height="200" frameborder="0"></iframe>
+    </div>
 
-<!-- Ana Sayfa -->
-<div id="home">
-    <h1>Hoş Geldiniz!</h1>
-    <p>Doğum günü kutlaması için en iyi site!</p>
-    <button onclick="toggleDarkMode()">Karanlık/Aydınlık Modu Değiştir</button>
-</div>
+    <div id="note-panel">
+        <h2>Notlar</h2>
+        <p>Burada notlarınızı saklayabilirsiniz!</p>
+    </div>
 
-<!-- Yazı Yazma Yarışması -->
-<div id="game">
-    <h2>Yazı Yazma Yarışması!</h2>
-    <p id="text-to-type">Bu metni hızlıca yaz!</p>
-    <input type="text" id="user-input" placeholder="Buraya yazın..." oninput="checkInput()" />
-    <p id="result"></p>
-</div>
+    <button id="dark-mode-btn">Karanlık Mod</button>
 
-<!-- Mesaj Gönderme -->
-<div id="message">
-    <h1>Mesajınızı Gönderin:</h1>
-    <textarea id="message" placeholder="Mesajınızı buraya yazın..."></textarea>
-    <button onclick="sendMessage()">Gönder</button>
-    <p id="message-result"></p>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
 
